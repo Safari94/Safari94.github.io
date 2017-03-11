@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>EPIC - Júnior Empresa de Engenharias da Universidade do Minho</title>
+
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+
+<!-- font awesome -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+<!-- animate.css -->
+<link rel="stylesheet" href="assets/animate/animate.css" />
+<link rel="stylesheet" href="assets/animate/set.css" />
+
+<!-- gallery -->
+<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+
+<!-- favicon -->
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+
+<link rel="stylesheet" href="assets/style.css">
+
+</head>
+
+<body>
+<div class="topbar animated fadeInLeftBig"></div>
+
+<!-- Header Starts -->
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation" id="top-nav">
+          <div class="container">
+            <div class="navbar-header">
+              <!-- Logo Starts -->
+              <a class="navbar-brand" href="#home"><img src="images/logo_epic.png" alt="logo"></a>
+              <!-- #Logo Ends -->
+
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+            </div>
+
+
+            <!-- Nav Starts -->
+            <div class="navbar-collapse  collapse">
+              <ul class="nav navbar-nav navbar-right scroll">
+                 <li class="active"><a href="index.html">Home</a></li>
+                 <li ><a href="index.html">Sobre nós</a></li>
+                 <li ><a href="works.html">Serviços</a></li>
+                 <li ><a href="team.html">Equipa</a></li>
+                 <li ><a href="contact.html">Contato</a></li>                 
+              </ul>
+            </div>
+            <!-- #Nav Ends -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+<!-- #Header Starts -->
+
+
+
+
+
+
+
+<!-- Cirlce Starts -->
+
+<div class="section-title text-center upper"> <h1>Contactos</h1> </div>
+<div class="divide30 hidden-xs hidden-sm"></div>
+
+<div class="row"> 
+<div class="col-sm-8"> 
+  <h5 class="upper">Fale connosco</h5> 
+  <div class="divide30"></div> 
+  <div id="formContainer_contacts" class="form-container">
+    <form enctype="multipart/form-data" name="formcontacts" id="formcontacts" method="post" action="javascript:void(0);" class="forms">
+    <input type="hidden" name="lang" id="lang" value="1">
+
+    <ol>
+        <li class="form-row text-input-row name-field animation-input">
+            <!--NOME-->
+                        <label for="formcontacts_name">Nome*</label>
+            <input type="text" name="formcontacts_name" id="formcontacts_name" class="{target:'#formcontacts_name_status',tagToload:{'.formcontacts_name':'#formcontacts_name_status','.script':'#result_contacts'}} text-input defaultText required watermark" title="Nome*">
+        </li>
+        <li class="form-row text-input-row email-field animation-input">
+            <!--EMAIL-->
+                        <label for="formcontacts_email">Email*</label>
+            <input type="text" name="formcontacts_email" id="formcontacts_email" class="{target:'#formcontacts_email_status',tagToload:{'.formcontacts_email':'#formcontacts_email_status','.script':'#result_contacts'}} text-input defaultText required email" title="Email*">
+        </li>
+        <li class="form-row text-input-row name-field animation-input">
+            <!--ASSUNTO-->
+                        <label for="formcontacts_subject_other">Assunto*</label>
+            <input type="text" name="formcontacts_subject_other" id="formcontacts_subject_other" class="{target:'#formcontacts_subject_other_status',tagToload:{'.formcontacts_subject_other':'#formcontacts_subject_other_status','.script':'#result_contacts'}} text-input defaultText required" title="Assunto*">
+        </li>
+        <li class="form-row text-area-row animation-input">
+            <!--MENSAGEM-->
+                        <label for="formcontacts_message">Mensagem*</label>
+            <textarea name="formcontacts_message" id="formcontacts_message" class="{target:'#formcontacts_message_status',tagToload:{'.formcontacts_message':'#formcontacts_message_status','.script':'#result_contacts'}} text-area required" rows="6"></textarea>
+        </li>
+        <li class="button-row grey text12 line24 left">
+            *Campos de preenchimento obrigatório
+        </li>
+        <li class="button-row right">
+            <a type="button" class="btn btn-send" id="formSubmitLink_formcontacts" href="javascript:;">Enviar</a>
+        </li>
+        <li class="button-row">
+            <<div class="resultForm tm60" id="result_contacts"><div class="">
+			<script type="text/javascript">
+				$(".required").parent().removeClass("has-success").addClass("error");
+			</script>
+		</div>	<div class="script">
+		<div class="alert alert-danger">Os campos assinalados com * são de preenchimento obrigatório</div>	</div>
+	</div>
+        </li>
+    </ol>
+</form>
+<script type="text/javascript">
+
+	/*-----------------------------------------------------------------------------------*/
+    /*  animation-input
+    /*-----------------------------------------------------------------------------------*/
+    if ($(".animation-input").length > 0) {
+    	$('input, textarea').each(function() {
+    		$(this).on('focus', function() {
+    			$(this).parent('.animation-input').addClass('active');
+    		});
+    		$(this).on('blur', function() {
+    			if ($(this).val().length == 0) {
+    				$(this).parent('.animation-input').removeClass('active');
+    			}
+    		});
+    		if ($(this).val() != '') $(this).parent('.animation-input').addClass('active');
+    	});
+    }
+    /*-----------------------------------------------------------------------------------*/
+
+	if ($('.numeric').length > 0) {
+		$('#formcontacts .numeric').numeric(null);
+	}
+
+	if ($('input, textarea').length > 0) {
+		$('input, textarea').placeholder();
+	}
+
+	$("#formSubmitLink_formcontacts:not(.disabled)").click(function() {
+		$("form#formcontacts").submit();
+	});
+
+	$("form#formcontacts").submit(function() { 
+		if(!idPosting) { 
+			idPosting = true; 
+			$("#formSubmitLink_formcontacts").addClass('disabled'); 
+		} 
+	});
+
+	$("#formResetLink_formcontacts").click(function() { 
+		$("#formcontacts").resetForm(); 
+		$(".required").parent().removeClass("error");
+		$('.resultForm').empty();
+	});
+
+	if (!$("#formSubmitLink_formcontacts").hasClass('disabled')) {
+		$("#formcontacts.login_form input, #formcontacts.form_recover input, #formcontacts.result_reset input, #formcontacts.form_contacts input").on("keydown", function (evt) { 
+			if ( evt.which == 13 && !$("#formSubmitLink_formcontacts").hasClass('disabled')) { 
+				if(!idPosting) { 
+					idPosting = true;
+					$("#formcontacts").submit();
+					return false; 
+				} 
+			}   
+		});
+	}
+	
+	var idPosting = false;
+	$.AjaxifyDefaults.loading_img = '/images/loading.gif';
+
+	$('#formcontacts').ajaxify({
+		event:'submit',
+		link:'/ajax/action/contacts/validate_submit',
+		forms:'#formcontacts',
+		target:'#result_contacts',
+		loading_target:'#result_contacts',
+		method:'POST',
+		animateOut:{'fade':'slow'},
+		animateIn:{'fade':'slow'},
+		onSuccess:function(o,data)
+		{
+			$("#formSubmitLink_formcontacts").removeClass('disabled');
+			$(o.target).html(data);
+			idPosting = false;
+			// $("#formcontacts").resetForm();
+		}
+	});
+
+	$(document).on('click','#formcontacts .close', function() {
+		$('#formcontacts .resultForm').empty();
+	});
+</script>
+</div> 
+</div>
+<aside class="col-sm-4 sidebar lp100"> <div class="sidebox widget"> <h5 class="upper">Contactos</h5> <div class="divide30"></div> <address> <p class="bm0">Morada:</p> <p>Rua de Francos, 373-381 <br> 4800-042 , Azurém <br> Guimarães-Portugal<br></p> <div class="divide10"></div> <p>Telemóvel: <br> +351 933 360 333</p> <div class="divide10"></div> <p>Email: <br> <a href="mailto:uepic.junior.uminho@gmail.com">epic.junior.uminho@gmail.com</a></p> <div class="divide10"></div> <p>Facebook: <br> <a href="https://www.facebook.com/joaomonizd.pt/" target="_blank">www.facebook.com/joaomonizd.pt/</a></p> </address> </div> </aside> </div>
+
+
+<!-- #Cirlce Ends -->
+
+
+
+
+
+
+
+
+
+<!-- About Ends -->
+
+
+<!--Contact Ends-->
+
+
+
+<!-- Footer Starts -->
+<div class="footer text-center spacer">
+<p class="wowload flipInX"><a href="#"><i class="fa fa-facebook fa-2x"></i></a> <a href="#"><i class="fa fa-dribbble fa-2x"></i></a> <a href="#"><i class="fa fa-twitter fa-2x"></i></a> <a href="#"><i class="fa fa-linkedin fa-2x"></i></a> </p>
+Copyright 2017 Júnior Empresa - EPIC. All rights reserved.
+</div>
+<!-- # Footer Ends -->
+<a href="#home" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
+
+
+
+
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title">title</h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+</div>
+
+
+
+<!-- jquery -->
+<script src="assets/jquery.js"></script>
+
+<!-- wow script -->
+<script src="assets/wow/wow.min.js"></script>
+
+
+<!-- boostrap -->
+<script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
+
+<!-- jquery mobile -->
+<script src="assets/mobile/touchSwipe.min.js"></script>
+<script src="assets/respond/respond.js"></script>
+
+<!-- gallery -->
+<script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
+
+<!-- custom script -->
+<script src="assets/script.js"></script>
+
+</body>
+
+</html>
